@@ -1,0 +1,68 @@
+<form class="mosh sheet actor ship" autocomplete="off">
+    <header class="sheet-header">
+        <!-- Header -->
+        <div class="header-fields"></div>
+    </header>
+    <!-- Page Title -->
+    <div class="circlestattitle black" style="font-size: 1.25rem;">Rolltable Configuration <i class="fa-solid fa-list"></i></div>
+    <div class="greyline"></div>
+    <!-- Panic Tables -->
+    <div class="circle-statwrapper" style="gap: 2px;">
+        <div class="circlestattitle">Panic Check <i class="fa-solid fa-bolt"></i></div>
+        <div class="grid grid-1col" style="padding-left: 8px; padding-right: 8px;">
+            <div class="resource">
+                <label class="resource-label">Panic Check</label>
+                <input type="text" name="table1ePanic" id="table1ePanic" value="{{table1ePanic}}" data-dtype="String" />
+            </div>
+        </div>
+    </div>
+    <br/>
+    <!-- Wounds Tables -->
+    <div class="circle-statwrapper" style="gap: 2px;">
+        <div class="circlestattitle">Wound Check <i class="fa-solid fa-user-injured"></i></div>
+        <div class="grid grid-1col" style="padding-left: 8px; padding-right: 8px;">
+            <div class="resource">
+                <label class="resource-label">Wound Check</label>
+                <input type="text" name="table1eWound" id="table1eWound" value="{{table1eWound}}" data-dtype="String" />
+            </div>
+        </div>
+    </div>
+    <br/>
+    <!-- Death Tables -->
+    <div class="circle-statwrapper" style="gap: 2px;">
+        <div class="circlestattitle">Death Save <i class="fa-solid fa-heartbeat"></i></div>
+        <div class="grid grid-1col" style="padding-left: 8px; padding-right: 8px;">
+            <div class="resource">
+                <label class="resource-label">Death Save</label>
+                <input type="text" name="table1eDeath" id="table1eDeath" value="{{table1eDeath}}" data-dtype="String" />
+            </div>
+        </div>
+    </div>
+    <br/>
+    <!-- Miscast Tables -->
+    <div class="circle-statwrapper" style="gap: 2px;">
+        <div class="circlestattitle">Miscast <i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <div class="grid grid-1col" style="padding-left: 8px; padding-right: 8px;">
+            <div class="resource">
+                <label class="resource-label">Miscast</label>
+                <input type="text" name="table1eMiscast" id="table1eMiscast" value="{{table1eMiscast}}" data-dtype="String" />
+            </div>
+        </div>
+    </div>
+    <br/>
+    <!-- Curse Tables -->
+    <div class="circle-statwrapper" style="gap: 2px;">
+        <div class="circlestattitle">Curse <i class="fa-solid fa-skull"></i></div>
+        <div class="grid grid-1col" style="padding-left: 8px; padding-right: 8px;">
+            <div class="resource">
+                <label class="resource-label">Curse</label>
+                <input type="text" name="table1eCurse" id="table1eCurse" value="{{table1eCurse}}" data-dtype="String" />
+            </div>
+        </div>
+    </div>
+    <br/>
+    <!-- Finish -->
+    <div class="" style="gap: 10px;">
+        <div class="button-white close-button list-roll" style="width: 100%;">FINISH <i class="fa-solid fa-right-long"></i></div>
+    </div>
+</form>

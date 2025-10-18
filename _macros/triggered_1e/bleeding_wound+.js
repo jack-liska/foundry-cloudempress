@@ -1,0 +1,1 @@
+game.mosh.initRollTable(game.settings.get('cloudempress','table1eWoundBleeding'),`1d10 [+]`,`low`,true,false,null,null);

@@ -1,0 +1,51 @@
+<form class="{{cssClass}}" autocomplete="off">
+
+    <header class="sheet-header">
+        <div class="header grid" style="grid-template-columns: 75px auto; width:100%;">
+            <!-- Image -->
+            <img class="sbt-profile" style="height: auto;" src="{{img}}" data-edit="img" title="{{name}}" />
+
+            <!-- NAME -->
+            <div class="">
+                <div class="headerinputtext">{{ localize 'Mosh.Name' }}</div>
+                <div class="headerinputfield charname"><input name="name" class="noborder" type="text" value="{{name}}"
+                        placeholder="{{ localize 'Mosh.Name' }}" /></div>
+            </div>
+
+        </div>
+    </header>
+    <br />
+    <div class="circle-statwrapper-horizontal">
+        <!-- Chalk Cost -->
+        <div class="resource healthspread minmaxtopstat flex-center" style="grid-template-rows: max-content;">
+            <label for="system.chalkCost" class="resource-label minmaxtext">{{ localize 'Mosh.ChalkCost' }}</label>
+
+            <div class="valuewrapper" style="width: 120px; background: white;">
+                <input class="maxhealth-input darkGreyText" type="text" name="system.chalkCost"
+                    value="{{system.chalkCost}}" data-dtype="Number" />
+            </div>
+        </div>
+    </div>
+    <br />
+
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="mosh sheet-tabs tabs" style="height: auto;" data-group="primary">
+        <a class="tab-select" data-tab="effect">{{ localize 'Mosh.Effect' }}</a>
+        <a class="tab-select" data-tab="aftereffect">{{ localize 'Mosh.AfterEffect' }}</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+        {{!-- Effect Tab --}}
+        <div class="tab" data-group="primary" data-tab="effect">
+            {{editor enriched.effect target="system.effect" button=true owner=owner editable=true}}
+        </div>
+
+        {{!-- After-Effect Tab --}}
+        <div class="tab" data-group="primary" data-tab="aftereffect">
+            {{editor enriched.afterEffect target="system.afterEffect" button=true owner=owner editable=true}}
+        </div>
+    </section>
+</form>

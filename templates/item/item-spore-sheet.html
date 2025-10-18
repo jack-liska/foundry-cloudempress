@@ -1,0 +1,57 @@
+<form class="{{cssClass}}" autocomplete="off">
+
+    <header class="sheet-header">
+        <div class="header grid" style="grid-template-columns: 75px auto; width:100%;">
+            <!-- Image -->
+            <img class="sbt-profile" style="height: auto;" src="{{img}}" data-edit="img" title="{{name}}" />
+
+            <!-- NAME -->
+            <div class="">
+                <div class="headerinputtext">{{ localize 'Mosh.Name' }}</div>
+                <div class="headerinputfield charname"><input name="name" class="noborder" type="text" value="{{name}}"
+                        placeholder="{{ localize 'Mosh.Name' }}" /></div>
+            </div>
+
+        </div>
+    </header>
+    <br />
+    <div class="circle-statwrapper-horizontal">
+        <!-- Rarity -->
+        <div class="resource healthspread minmaxtopstat flex-center" style="grid-template-rows: max-content;">
+            <label for="system.rarity" class="resource-label minmaxtext">{{ localize 'Mosh.Rarity' }}</label>
+
+            <div class="textvaluewrapper" style="width: 180px; background: white;">
+                <input class="textvaluewrapper-input darkGreyText" type="text" name="system.rarity"
+                    value="{{system.rarity}}" data-dtype="String" />
+            </div>
+        </div>
+
+        <!-- Active Status -->
+        <div class="resource healthspread blankstat flex-center" style="grid-template-rows: max-content;">
+            <label for="system.active" class="resource-label minmaxtext">{{ localize 'Mosh.Active' }}</label>
+            <input type="checkbox" name="system.active" data-dtype="Boolean" {{checked system.active}} />
+        </div>
+    </div>
+    <br />
+
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="mosh sheet-tabs tabs" style="height: auto;" data-group="primary">
+        <a class="tab-select" data-tab="effect">{{ localize 'Mosh.Effect' }}</a>
+        <a class="tab-select" data-tab="description">{{ localize 'Mosh.Description' }}</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+        {{!-- Effect Tab --}}
+        <div class="tab" data-group="primary" data-tab="effect">
+            {{editor enriched.effect target="system.effect" button=true owner=owner editable=true}}
+        </div>
+
+        {{!-- Description Tab --}}
+        <div class="tab" data-group="primary" data-tab="description">
+            {{editor enriched.description target="system.description" button=true owner=owner editable=true}}
+        </div>
+    </section>
+</form>

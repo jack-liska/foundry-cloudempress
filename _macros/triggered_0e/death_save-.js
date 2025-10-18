@@ -1,0 +1,1 @@
+game.mosh.initRollTable(game.settings.get('cloudempress','table0eDeath'),`1d10 [-]`,`high`,false,false,null,null);

@@ -1,0 +1,152 @@
+<form class="{{cssClass}}" autocomplete="off">
+
+  <header class="sheet-header">
+    <div class="header grid" style="grid-template-columns: 75px auto; width:100%;">
+      <!-- Image -->
+      <img class="sbt-profile" style="height: auto;" src="{{img}}" data-edit="img" title="{{name}}" />
+
+      <!-- NAME -->
+      <div class="">
+        <div class="headerinputtext">{{ localize 'Mosh.Name' }}</div>
+        <div class="headerinputfield charname"><input name="name" class="noborder" type="text" value="{{name}}"
+            placeholder="Name" /></div>
+      </div>
+
+    </div>
+  </header>
+  <br />
+  <div class="header-fields grid">
+    {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
+    use both the "grid" and "grid-Ncol" class where "N" can be any number
+    from 1 to 12 and will create that number of columns. --}}
+
+    <div class="grid grid-1col widegap">
+      <!-- Mind -->
+      <div class="mainstatwrapper">
+        <div class="resource mainstat">
+          <div class="mainstatlabel">
+            <span class=" mainstattext" data-key="mind" data-label="{{ localize 'Mosh.Mind' }}">{{ localize
+              'Mosh.Mind' }}</span>
+          </div>
+          <input id="system.base_adjustment.mind" class="circle-input" type="text"
+            name="system.base_adjustment.mind" value="{{system.base_adjustment.mind}}" data-dtype="Number" />
+        </div>
+      </div>
+
+      <!-- Heart -->
+      <div class="mainstatwrapper">
+        <div class="resource mainstat">
+          <div class="mainstatlabel">
+            <span class=" mainstattext" data-key="heart" data-label="{{ localize 'Mosh.Heart' }}">{{ localize
+              'Mosh.Heart' }}</span>
+          </div>
+          <input class="circle-input" id="system.base_adjustment.heart" type="text"
+            name="system.base_adjustment.heart" value="{{system.base_adjustment.heart}}" data-dtype="Number" />
+        </div>
+      </div>
+
+      <!-- Strength -->
+      <div class="mainstatwrapper">
+        <div class="resource mainstat">
+          <div class="mainstatlabel">
+            <span class=" mainstattext" data-key="strength" data-label="{{ localize 'Mosh.Strength' }}">{{ localize
+              'Mosh.Strength' }}</span>
+          </div>
+          <input id="system.base_adjustment.strength" class="circle-input" type="text"
+            name="system.base_adjustment.strength" value="{{system.base_adjustment.strength}}" data-dtype="Number" />
+        </div>
+      </div>
+
+      <!-- Speed -->
+      <div class="mainstatwrapper">
+        <div class="resource mainstat">
+          <div class="mainstatlabel">
+            <span class=" mainstattext" data-key="speed" data-label="{{ localize 'Mosh.Speed' }}">{{ localize
+              'Mosh.Speed' }}</span>
+          </div>
+          <input id="system.base_adjustment.speed" class="circle-input" type="text"
+            name="system.base_adjustment.speed" value="{{system.base_adjustment.speed}}" data-dtype="Number" />
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-1col widegap">
+      <!-- Reality -->
+      <div class="mainstatwrapper">
+        <div class="resource mainstat">
+          <div class="mainstatlabel">
+            <span class=" mainstattext" data-key="reality" data-label="{{ localize 'Mosh.Reality' }}">{{ localize
+              'Mosh.Reality' }}</span>
+          </div>
+          <input id="system.base_adjustment.reality" class="circle-input" type="text"
+            name="system.base_adjustment.reality" value="{{system.base_adjustment.reality}}" data-dtype="Number" />
+        </div>
+      </div>
+
+      <!-- Fear -->
+      <div class="mainstatwrapper">
+        <div class="resource mainstat">
+          <div class="mainstatlabel">
+            <span class="mainstattext" data-key="fear" data-label="{{ localize 'Mosh.Fear' }}">{{ localize 'Mosh.Fear'
+              }}</span>
+          </div>
+          <input id="system.base_adjustment.fear" class="circle-input" type="text" name="system.base_adjustment.fear"
+            value="{{system.base_adjustment.fear}}" data-dtype="Number" />
+        </div>
+      </div>
+
+      <!-- Body -->
+      <div class="mainstatwrapper">
+        <div class="resource mainstat">
+          <div class="mainstatlabel">
+            <span class=" mainstattext" data-key="body" data-label="{{ localize 'Mosh.Body' }}">{{ localize 'Mosh.Body'
+              }}</span>
+          </div>
+          <input id="system.base_adjustment.body" class="circle-input" type="text" name="system.base_adjustment.body"
+            value="{{system.base_adjustment.body}}" data-dtype="Number" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="mosh sheet-tabs tabs" style="height: auto;" data-group="primary">
+    <a class="tab-select" data-tab="description">{{ localize 'Mosh.Description' }}</a>
+    <a class="tab-select" data-tab="items.granted">{{ localize 'Mosh.ItemsGranted' }}</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Description Tab --}}
+    <div class="tab" data-group="primary" data-tab="description">
+      {{editor enriched.description target="system.description" button=true owner=owner editable=true}}
+    </div>
+
+    {{!-- Items Granted Tab --}}
+    <div class="tab dropitem items" id="items.granted" data-group="primary" data-tab="items.granted">
+      <!-- ITEMS GRANTED -->
+      <ol class="items-list" style="margin-bottom : 10px;">
+        <li class="item flexrow item-header">
+          <div class="item-image"></div>
+          <div class="skill-stat">{{ localize 'Mosh.ItemName' }}</div>
+          <div class="item-controls">
+          </div>
+        </li>
+
+        {{#each system.base_adjustment.items_granted_object as |item id|}}
+            <li class="item flexrow" data-item-id="{{item.uuid}}">
+              <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24" /></div>
+              <div class="skill-name skill-roll list-roll">{{item.name}}</div>
+              <div class="item-controls">
+                <a class="item-control items-granted-delete" title="{{ localize 'Mosh.DeleteItem' }}"><i
+                    class="fas fa-trash"></i></a>
+              </div>
+            </li>
+        {{/each}}
+      </ol>
+    </div>
+
+  </section>
+</form>

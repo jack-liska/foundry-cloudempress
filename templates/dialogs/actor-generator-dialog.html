@@ -1,0 +1,224 @@
+<form class="{{cssClass}} dropitem actor-generator" autocomplete="off">
+
+  {{!-- Sheet Header --}}
+  <header class="char-header grid">
+
+    <div id="generator-header-grid-1col" class="header">
+
+      <div class="">
+        <div class="headerinputtext">{{ localize 'Mosh.Name' }}</div>
+        <div class="headerinputfield charname">
+          <input name="name" class="noborder" type="text" value="{{name}}" placeholder="Name" />
+        </div>
+      </div>
+      <!-- CLASS -->
+      <div class="">
+        <div class="headerinputtext">{{ localize 'Mosh.CLASS' }}</div>
+        <div class="headerinputfield charname">
+
+          <input id="system.class.value" type="text" name="system.class.value" class="noborder" list="class_options"
+            type="text" value="{{system.class.value}}" placeholder="" />
+
+          <datalist id="class_options">
+          </datalist>
+
+          <!--input id="system.class.value" name="system.class.value" class="noborder"
+              type="text" value="{{system.class.value}}" placeholder="" /-->
+        </div>
+        <input type="hidden" id="system.class.uuid" name="system.class.uuid" class="noborder" />
+        <input type="hidden" id="system.class.traumaresponse" name="system.class.traumaresponse" class="noborder" />
+      </div>
+
+      <!-- AGE -->
+      <div class="">
+        <div class="headerinputtext">{{ localize 'Mosh.AGE' }}</div>
+        <div class="headerinputfield charname">
+
+          <input id="system.other.age.value" type="text" name="system.other.age.value" class="noborder" list="age_options"
+            type="text" value="{{system.other.age.value}}" placeholder="" />
+
+          <datalist id="age_options">
+          </datalist>
+        </div>
+        <input type="hidden" id="system.other.age.uuid" name="system.other.age.uuid" class="noborder" />
+      </div>
+
+    </div>
+
+    <div class="header-fields grid">
+      {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
+      use both the "grid" and "grid-Ncol" class where "N" can be any number
+      from 1 to 12 and will create that number of columns. --}}
+
+      <div class="grid grid-1col widegap">
+        <!-- Mind -->
+        <div class="mainstatwrapper">
+          <div class="resource mainstat">
+            <div class="mainstatlabel">
+              <span class=" mainstattext" data-key="mind" data-roll="d100"
+                data-label="{{ localize 'Mosh.Mind' }}">{{ localize 'Mosh.Mind' }}</span>
+            </div>
+            <img class="clicable-item circle-input" id="system.stats.mind.value" src="icons/svg/d20-black.svg"
+              alt="roll">
+            <input readonly hidden class="circle-input" id="system.stats.mind.value" type="text"
+              name="system.stats.mind.value" value="{{system.stats.mind.value}}" data-dtype="Number" />
+          </div>
+          <input class="mainstatmod-input" type="text" name="system.stats.mind.bonus"
+            value="{{system.stats.mind.bonus}}" data-dtype="Number" />
+          <div class="mainstatmod-title">+</div>
+        </div>
+
+        <!-- Heart -->
+        <div class="mainstatwrapper">
+          <div class="resource mainstat">
+            <div class="mainstatlabel">
+              <span class=" mainstattext" data-key="heart" data-roll="d100"
+                data-label="{{ localize 'Mosh.Heart' }}">{{ localize 'Mosh.Heart' }}</span>
+            </div>
+            <img class="clicable-item circle-input" id="system.stats.heart.value" src="icons/svg/d20-black.svg"
+              alt="roll">
+            <input readonly hidden class="circle-input" id="system.stats.heart.value" type="text"
+              name="system.stats.heart.value" value="{{system.stats.heart.value}}" data-dtype="Number" />
+          </div>
+          <input class="mainstatmod-input" type="text" name="system.stats.heart.bonus"
+            value="{{system.stats.heart.bonus}}" data-dtype="Number" />
+          <div class="mainstatmod-title">+</div>
+        </div>
+
+        <!-- Strength -->
+        <div class="mainstatwrapper">
+          <div class="resource mainstat">
+            <div class="mainstatlabel">
+              <span class=" mainstattext" data-key="strength" data-label="{{ localize 'Mosh.Strength' }}">{{ localize
+                'Mosh.Strength' }}</span>
+            </div>
+            <img class="clicable-item circle-input" id="system.stats.strength.value" src="icons/svg/d20-black.svg"
+              alt="roll">
+            <input readonly hidden id="system.stats.strength.value" class="circle-input" type="text"
+              name="system.stats.strength.value" value="{{system.stats.strength.value}}" data-dtype="Number" />
+          </div>
+          <input class="mainstatmod-input" type="text" name="system.stats.strength.bonus"
+            value="{{system.stats.strength.bonus}}" data-dtype="Number" />
+          <div class="mainstatmod-title">+</div>
+        </div>
+
+        <!-- Speed -->
+        <div class="mainstatwrapper">
+          <div class="resource mainstat">
+            <div class="mainstatlabel">
+              <span class=" mainstattext" data-key="speed" data-roll="d100" data-label="{{ localize 'Mosh.Speed' }}">{{
+                localize 'Mosh.Speed' }}</span>
+            </div>
+            <img class="clicable-item circle-input" id="system.stats.speed.value" src="icons/svg/d20-black.svg"
+              alt="roll">
+            <input readonly hidden class="circle-input" id="system.stats.speed.value" type="text"
+              name="system.stats.speed.value" value="{{system.stats.speed.value}}" data-dtype="Number" />
+          </div>
+          <input class="mainstatmod-input" type="text" name="system.stats.speed.bonus"
+            value="{{system.stats.speed.bonus}}" data-dtype="Number" />
+          <div class="mainstatmod-title">+</div>
+        </div>
+      </div>
+
+      <div class="grid grid-1col widegap">
+        <!-- Reality -->
+        <div class="mainstatwrapper">
+          <div class="resource mainstat">
+            <div class="mainstatlabel">
+              <span class=" mainstattext" data-key="reality" data-roll="d100"
+                data-label="{{ localize 'Mosh.Reality' }}">{{ localize 'Mosh.Reality' }}</span>
+            </div>
+            <img class="clicable-item circle-input" id="system.stats.reality.value" src="icons/svg/d20-black.svg"
+              alt="roll">
+            <input readonly hidden id="system.stats.reality.value" class="circle-input" type="text"
+              name="system.stats.reality.value" value="{{system.stats.reality.value}}" data-dtype="Number" />
+          </div>
+          <input class="mainstatmod-input" type="text" name="system.stats.reality.bonus"
+            value="{{system.stats.reality.bonus}}" data-dtype="Number" />
+          <div class="mainstatmod-title">+</div>
+        </div>
+
+        <!-- Fear -->
+        <div class="mainstatwrapper">
+          <div class="resource mainstat">
+            <div class="mainstatlabel">
+              <span class="mainstattext" data-key="fear" data-roll="d100" data-label="{{ localize 'Mosh.Fear' }}">{{
+                localize 'Mosh.Fear' }}</span>
+            </div>
+            <img class="clicable-item circle-input" id="system.stats.fear.value" src="icons/svg/d20-black.svg"
+              alt="roll">
+            <input readonly hidden id="system.stats.fear.value" class="circle-input" type="text"
+              name="system.stats.fear.value" value="{{system.stats.fear.value}}" data-dtype="Number" />
+          </div>
+          <input class="mainstatmod-input" type="text" name="system.stats.fear.bonus"
+            value="{{system.stats.fear.bonus}}" data-dtype="Number" />
+          <div class="mainstatmod-title">+</div>
+        </div>
+
+        <!-- body -->
+        <div class="mainstatwrapper">
+          <div class="resource mainstat">
+            <div class="mainstatlabel">
+              <span class=" mainstattext" data-key="body" data-roll="d100" data-label="{{ localize 'Mosh.Body' }}">{{
+                localize 'Mosh.Body' }}</span>
+            </div>
+            <img class="clicable-item circle-input" id="system.stats.body.value" src="icons/svg/d20-black.svg"
+              alt="roll">
+            <input readonly hidden id="system.stats.body.value" class="circle-input" type="text"
+              name="system.stats.body.value" value="{{system.stats.body.value}}" data-dtype="Number" />
+          </div>
+          <input class="mainstatmod-input" type="text" name="system.stats.body.bonus"
+            value="{{system.stats.body.bonus}}" data-dtype="Number" />
+          <div class="mainstatmod-title">+</div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="element-group grid grid-2col">
+
+
+    <!-- item:skills -->
+    <div class="grid grid-1col">
+      <div class="resource mainstat">
+        <div class="fulllabel mainstatlabel">
+          <span class=" mainstattext" data-key="skills" data-label="skills">{{ localize 'Mosh.Skills' }}</span>
+        </div>
+      </div>
+      <div class="headerinputfield ulinputfield">
+        <input type="hidden" id="system.class.skills.uuid" name="system.class.skills.uuid" class="noborder">
+        <ul id="system.class.skils.text">
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <!-- Roll all and save buttons -->
+  <div class="element-group grid grid-3col">
+    <div class="mainstatwrapper">
+      <div id="roll.everything" class="resource mainstat">
+        <div class="mainstatlabel">
+          <span class="smalltext mainstattext" class=" mainstattext" data-label="all">
+            Roll everything</span>
+        </div>
+        <img class="clicable-item circle-input" src="icons/svg/d20-black.svg" alt="roll">
+      </div>
+    </div>
+
+    <div class="resource mainstat">
+      <div class="fulllabel mainstatlabel">
+        <span class="smalltext mainstattext" class=" mainstattext" data-key="removepreviousitems"
+          data-label="removepreviousitems">Remove previous items</span>
+      </div>
+      <input checked class="clicable-item checkbox-round circle-input" type="checkbox" name="system.removepreviousitems"
+        id="system.removepreviousitems" value="{{system.removepreviousitems}}" data-dtype="Boolean" />
+    </div>
+
+    <div id="submit" class="resource mainstat">
+      <div class="mainstatlabel">
+        <span class="smalltext mainstattext" data-label="save">
+          Save character</span>
+      </div>
+      <img class="clicable-item circle-input" src="icons/svg/wall-direction.svg" alt="save">
+    </div>
+  </div>
+</form>

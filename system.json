@@ -1,0 +1,172 @@
+{
+  "id": "cloudempress",
+  "title": "Cloud Empress RPG",
+  "description": "An ecological science fantasy RPG system for FoundryVTT, powered by the Panic Engine.",
+  "version": "0.0.1",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12",
+    "maximum": "12"
+  },
+  "esmodules": [
+    "module/mosh.js"
+  ],
+  "styles": [
+    "css/mosh.css"
+  ],
+  "packs": [
+    {
+      "name": "Cloud Empress Rolltables",
+      "label": "Cloud Empress Rolltables",
+      "type": "RollTable",
+      "system": "cloudempress",
+      "path": "packs/rolltables-cloud-empress",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "Age",
+      "label": "Cloud Empress Age",
+      "type": "Item",
+      "system": "cloudempress",
+      "path": "packs/age",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "Class",
+      "label": "Cloud Empress Classes",
+      "type": "Item",
+      "system": "cloudempress",
+      "path": "packs/class",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "Conditions",
+      "label": "Cloud Empress Conditions",
+      "type": "Item",
+      "system": "cloudempress",
+      "path": "packs/condtions",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "Crests",
+      "label": "Cloud Empress Crests",
+      "type": "Item",
+      "system": "cloudempress",
+      "path": "packs/crests",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "Items",
+      "label": "Cloud Empress Items",
+      "type": "Item",
+      "system": "cloudempress",
+      "path": "packs/items",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "Skills",
+      "label": "Cloud Empress Skills",
+      "type": "Item",
+      "system": "cloudempress",
+      "path": "packs/skills",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "Spells",
+      "label": "Cloud Empress Spells",
+      "type": "Item",
+      "system": "cloudempress",
+      "path": "packs/spells",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "Spores",
+      "label": "Cloud Empress Spores",
+      "type": "Item",
+      "system": "cloudempress",
+      "path": "packs/spores",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "macros_triggered_1e",
+      "label": "Triggered Macros (1e)",
+      "system": "cloudempress",
+      "path": "packs/macros_triggered_1e.db",
+      "type": "Macro",
+      "flags": {},
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "media": [
+    {
+      "type": "cover",
+      "loop": false,
+      "flags": {}
+    },
+    {
+      "type": "setup",
+      "url": "systems/cloudempress/images/icons/ui/system/ce-repo.png",
+      "thumbnail": "systems/cloudempress/images/icons/ui/system/ce-thumbnail.png"
+    }
+  ],
+  "background": "systems/cloudempress/images/icons/ui/system/ce-background.png",
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
+    },
+    {
+      "lang": "pt-BR",
+      "path": "lang/pt-BR.json",
+      "flags": {}
+    }
+  ],
+  "grid": {
+    "distance": 1,
+    "units": "meter"
+  },
+  "primaryTokenAttribute": "health",
+  "secondaryTokenAttribute": "other.stress",
+  "url": "https://cloudempress.com",
+  "manifest": "",
+  "download": "",
+  "license": "LICENSE.txt",
+  "authors": [
+    {
+      "name": "prmrdl",
+      "flags": {}
+    }
+  ]
+}

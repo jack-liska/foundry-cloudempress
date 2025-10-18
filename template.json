@@ -1,0 +1,398 @@
+{
+  "Actor": {
+    "types": [
+      "character",
+      "creature"
+    ],
+    "templates": {
+      "base": {
+        "health": {
+          "value": 0,
+          "min": 0,
+          "max": 10,
+          "label" : "Damage"
+        },
+        "hits": {
+          "value": 0,
+          "min": 0,
+          "max" : 2,
+          "label" : "Wounds"
+        },
+        "netHP": {
+          "value": 20,
+          "min": 0,
+          "max" : 20,
+          "label" : "Net HP"
+        },
+        "bleeding": {
+          "value": 0,
+          "min": 0,
+          "label" : "Bleeding"
+        }
+      }
+    },
+    "character": {
+      "templates": [
+        "base"
+      ],
+      "biography": "",
+      "notes": "",
+      "weight" : {
+        "current" : 0,
+        "capacity" : 0
+      },
+      "class": {
+        "value": ""
+      },
+      "rank": {
+        "value": ""
+      },
+      "pronouns": {
+        "value": ""
+      },
+      "credits": {
+        "value": ""
+      },
+      "stressdesc": {
+        "value": ""
+      },
+      "xp": {
+        "value": 0,
+        "html" : 0,
+        "selectedSkill" : ""
+      },
+      "attributes": {
+        "level": {
+          "value": 0
+        }
+      },
+      "stats": {
+        "mind": {
+          "value": 30,
+          "mod": 0,
+          "min": 0,
+          "max": 99,
+          "label": "Mind",
+          "rollLabel": "Mind Check"
+        },
+        "heart": {
+          "value": 30,
+          "mod": 0,
+          "min": 0,
+          "max": 99,
+          "label": "Heart",
+          "rollLabel": "Heart Check"
+        },
+        "strength": {
+          "value": 30,
+          "mod": 0,
+          "min": 0,
+          "max": 99,
+          "label": "Strength",
+          "rollLabel": "Strength Check"
+        },
+        "speed": {
+          "value": 30,
+          "mod": 0,
+          "min": 0,
+          "max": 99,
+          "label": "Speed",
+          "rollLabel": "Speed Check"
+        },
+        "reality": {
+          "value": 25,
+          "mod": 0,
+          "min": 0,
+          "max": 99,
+          "label": "Reality",
+          "rollLabel": "Reality Save"
+        },
+        "fear": {
+          "value": 25,
+          "mod": 0,
+          "min": 0,
+          "max": 99,
+          "label": "Fear",
+          "rollLabel": "Fear Save"
+        },
+        "body": {
+          "value": 25,
+          "mod": 0,
+          "min": 0,
+          "max": 99,
+          "label": "Body",
+          "rollLabel": "Body Save"
+        },
+        "armor": {
+          "value": 0,
+          "mod": 0,
+          "min": 0,
+          "max": 99,
+          "damageReduction": 0,
+          "cover": "none",
+          "label": "Armor",
+          "rollLabel": "Armor Save"
+        }
+      },
+      "other": {
+        "stress": {
+          "value": 0,
+          "min": 0,
+          "max": 10,
+          "label" : "Stress"
+        },
+        "chalk": {
+          "value": 0,
+          "min": 0,
+          "max": 99,
+          "label" : "Chalk"
+        },
+        "provisions": {
+          "value": 1,
+          "min": 0,
+          "max": 10,
+          "label" : "Provisions"
+        },
+        "age": {
+          "value": "",
+          "label": "Age"
+        },
+        "stressdesc": {
+          "value": ""
+        }
+      }
+    },
+    "creature": {
+      "templates": [
+        "base"
+      ],
+      "biography": "",
+      "notes": "",
+      "description": "This is a description",
+      "xp": {
+        "value": 1,
+        "html": ""
+      },
+      "stats": {
+        "combat": {
+          "value": 10,
+          "min": 0,
+          "max": 99,
+          "label": "Combat",
+          "rollLabel": "Combat Check",
+          "enabled" : false
+        },
+        "instinct": {
+          "value": 10,
+          "min": 0,
+          "max": 99,
+          "label": "Instinct",
+          "rollLabel": "Instinct Check",
+          "enabled" : true
+        },
+        "speed": {
+          "value": 10,
+          "min": 0,
+          "max": 99,
+          "label": "Speed",
+          "rollLabel": "Speed Check",
+          "enabled" : false
+        },
+        "loyalty": {
+          "value": 10,
+          "min": 0,
+          "max": 99,
+          "label": "Loyalty",
+          "rollLabel": "Loyalty Check",
+          "enabled" : false
+        },
+        "armor": {
+          "value": 0,
+          "mod": 0,
+          "min": 0,
+          "max": 99,
+          "damageReduction": 0,
+          "cover": "none",
+          "label": "Armor",
+          "rollLabel": "Armor Save",
+          "enabled" : false
+        },
+        "sanity": {
+          "value": 10,
+          "min": 0,
+          "max": 99,
+          "label": "Sanity",
+          "rollLabel": "Sanity Save",
+          "enabled" : false
+        }
+      }
+    }
+  },
+  "Item": {
+    "types": [
+      "item",
+      "skill",
+      "weapon",
+      "armor",
+      "ability",
+      "condition",
+      "class",
+      "age",
+      "spell",
+      "crest",
+      "spore"
+    ],
+    "templates": {
+      "base": {
+        "description": ""
+      }
+    },
+    "item": {
+      "templates": [
+        "base"
+      ],
+      "quantity": 1,
+      "weight": 0,
+      "cost" : 0
+    },
+    "skill": {
+      "templates": [
+        "base"
+      ],
+      "rank": "Trained",
+      "bonus": 10,
+      "prerequisite_ids": []
+    },
+    "weapon": {
+      "templates": [
+        "base"
+      ],
+      "antiArmor": false,
+      "damage": "1d10",
+      "ammo": 10,
+      "shots": 1,
+      "curShots": 0,
+      "shotsPerFire" : 1,
+      "useAmmo": false,
+      "ammoType": "",
+      "wound":"",
+      "weight": 0,
+      "cost" : 0,
+      "ranges": {
+        "short": 0,
+        "medium": 0,
+        "long": 0,
+        "value" : ""
+      },
+      "settings" : {
+        "firstEdition" : false
+      }
+    },
+    "armor": {
+      "templates": [
+        "base"
+      ],
+      "armorPoints": 1,
+      "damageReduction":0,
+      "speed": "",
+      "oxygenMax": 0,
+      "oxygenCurrent": 0,      
+      "weight": 0,
+      "cost" : 0
+    },
+    "condition": {
+      "templates": [
+        "base"
+      ],
+      "severity": 1,
+      "treatment" : {
+        "value" : 0,
+        "html" : ""
+      }
+    },
+    "ability": {
+      "templates": [
+        "base"
+      ],
+      "text": "An Ability",
+      "roll": ""
+    },
+    "class": {
+      "templates": [
+        "base"
+      ],
+      "source": "",
+      "author": "",
+      "link": "",
+      "trauma_response": "",
+      "common_skills": [],
+      "base_adjustment": {
+        "mind": 0,
+        "heart": 0,
+        "strength": 0,
+        "speed": 0,
+        "reality": 0,
+        "fear": 0,
+        "body": 0,
+        "max_wounds": 0,
+        "skills_granted": []
+      },
+      "selected_adjustment": {
+        "choose_stat": [],
+        "choose_skill_and": {
+          "trained": 0,
+          "expert": 0,
+          "expert_full_set": 0,
+          "master": 0,
+          "master_full_set": 0
+        },
+        "choose_skill_or": []
+      },
+      "roll_tables": {
+        "loadout": ""
+      }
+    },
+    "age": {
+      "templates": [
+        "base"
+      ],
+      "source": "",
+      "author": "",
+      "link": "",
+      "base_adjustment": {
+        "mind": 0,
+        "heart": 0,
+        "strength": 0,
+        "speed": 0,
+        "reality": 0,
+        "fear": 0,
+        "body": 0,
+        "items_granted": []
+      }
+    },
+    "spell": {
+      "templates": [
+        "base"
+      ],
+      "chalkCost": 1,
+      "effect": "",
+      "afterEffect": "",
+      "rollFormula": "3d10"
+    },
+    "crest": {
+      "templates": [
+        "base"
+      ],
+      "chalkCost": 1,
+      "effect": ""
+    },
+    "spore": {
+      "templates": [
+        "base"
+      ],
+      "rarity": "Common",
+      "effect": "",
+      "active": false
+    }
+  }
+}
