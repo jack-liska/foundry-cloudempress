@@ -159,13 +159,13 @@
   },
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "other.stress",
-  "url": "https://cloudempress.com",
-  "manifest": "",
-  "download": "",
+  "url": "https://github.com/prmrdl-rccn/foundry-cloudempress",
+  "manifest": "https://raw.githubusercontent.com/prmrdl-rccn/foundry-cloudempress/0.0.1/system.json",
+  "download": "https://github.com/prmrdl-rccn/foundry-cloudempress/releases/download/0.0.1/foundry-cloudempress.zip",
   "license": "LICENSE.txt",
   "authors": [
     {
-      "name": "prmrdl",
+      "name": "prmrdl-rccn",
       "flags": {}
     }
   ]
