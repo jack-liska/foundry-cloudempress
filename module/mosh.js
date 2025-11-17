@@ -61,17 +61,17 @@ Hooks.once('init', async function () {
 
 
   // Register sheet application classes
-  Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("cloudempress", MothershipActorSheet, {types: ['character'], makeDefault: true});
-  Actors.registerSheet("cloudempress", MothershipCreatureSheet, {types: ['creature'], makeDefault: false});
-  Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("cloudempress", MothershipClassSheet, {types: ['class'], makeDefault: true});
-  Items.registerSheet("cloudempress", MothershipAgeSheet, {types: ['age'], makeDefault: true});
-  Items.registerSheet("cloudempress", MothershipSkillSheet, {types: ['skill'], makeDefault: true});
-  Items.registerSheet("cloudempress", MothershipSpellSheet, {types: ['spell'], makeDefault: true});
-  Items.registerSheet("cloudempress", MothershipCrestSheet, {types: ['crest'], makeDefault: true});
-  Items.registerSheet("cloudempress", MothershipSporeSheet, {types: ['spore'], makeDefault: true});
-  Items.registerSheet("cloudempress", MothershipItemSheet, {
+  foundry.documents.collections.Actors.unregisterSheet("core", foundry.appv1.sheets.ActorSheet);
+  foundry.documents.collections.Actors.registerSheet("cloudempress", MothershipActorSheet, {types: ['character'], makeDefault: true});
+  foundry.documents.collections.Actors.registerSheet("cloudempress", MothershipCreatureSheet, {types: ['creature'], makeDefault: false});
+  foundry.documents.collections.Items.unregisterSheet("core", foundry.appv1.sheets.ItemSheet);
+  foundry.documents.collections.Items.registerSheet("cloudempress", MothershipClassSheet, {types: ['class'], makeDefault: true});
+  foundry.documents.collections.Items.registerSheet("cloudempress", MothershipAgeSheet, {types: ['age'], makeDefault: true});
+  foundry.documents.collections.Items.registerSheet("cloudempress", MothershipSkillSheet, {types: ['skill'], makeDefault: true});
+  foundry.documents.collections.Items.registerSheet("cloudempress", MothershipSpellSheet, {types: ['spell'], makeDefault: true});
+  foundry.documents.collections.Items.registerSheet("cloudempress", MothershipCrestSheet, {types: ['crest'], makeDefault: true});
+  foundry.documents.collections.Items.registerSheet("cloudempress", MothershipSporeSheet, {types: ['spore'], makeDefault: true});
+  foundry.documents.collections.Items.registerSheet("cloudempress", MothershipItemSheet, {
     types: [
       "item",
       "weapon",
