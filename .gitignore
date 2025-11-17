@@ -1,0 +1,67 @@
+# Node / package
+node_modules/
+
+# Build artifacts
+dist/
+build/
+lib/
+.out/
+
+# Releases and packaged zips
+_releases/
+.releases/
+
+# Foundry-specific generated data (local/dev)
+/data/
+/packs/*.db
+/packs/*.db.gz
+/packs/*.sqlite
+ /packs/**/*.db
+ /packs/**/*.db.gz
+/.cache-foundry
+
+# Caches
+.cache/
+.parcel-cache/
+.turbo/
+.next/
+
+# Maps and sourcemaps
+*.map
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment files
+.env
+.env.*
+
+# Editor directories and settings
+.vscode/
+*.code-workspace
+.idea/
+
+# Coverage
+coverage/
+
+# Misc
+*.tgz
+*.zip
+*.tar.gz
+
+# Foundry compendia and caches (compiled)
+/packs/*.db
+/packs/*.db.gz
+/packs/*.sqlite
+/packs/**/*.db
+/packs/**/*.db.gz
+/.cache-foundry
