@@ -1,9 +1,9 @@
 import { DLActorGenerator } from "../windows/actor-generator.js";
 /**
  * Extend the basic ActorSheet with some very simple modifications
- * @extends {ActorSheet}
+ * @extends {foundry.appv1.sheets.ActorSheet}
  */
-export class MothershipActorSheet extends ActorSheet {
+export class MothershipActorSheet extends foundry.appv1.sheets.ActorSheet {
 
   /** @override */
   static get defaultOptions() {

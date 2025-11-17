@@ -65,3 +65,13 @@ coverage/
 /packs/**/*.db
 /packs/**/*.db.gz
 /.cache-foundry
+
+# RocksDB / compiled pack artifacts
+/packs/**/*.ldb
+/packs/**/CURRENT
+/packs/**/LOG
+/packs/**/LOG.old
+/packs/**/MANIFEST-*
+/packs/**/lost/
+/packs/**/LOCK
+/packs/**/*.log

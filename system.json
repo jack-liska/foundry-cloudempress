@@ -2,11 +2,11 @@
   "id": "cloudempress",
   "title": "Cloud Empress RPG",
   "description": "An ecological science fantasy RPG system for FoundryVTT, powered by the Panic Engine.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "compatibility": {
     "minimum": "12",
     "verified": "12",
-    "maximum": "12"
+    "maximum": "13"
   },
   "esmodules": [
     "module/mosh.js"
