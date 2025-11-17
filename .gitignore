@@ -16,8 +16,8 @@ _releases/
 /packs/*.db
 /packs/*.db.gz
 /packs/*.sqlite
- /packs/**/*.db
- /packs/**/*.db.gz
+/packs/**/*.db
+/packs/**/*.db.gz
 /.cache-foundry
 
 # Caches
